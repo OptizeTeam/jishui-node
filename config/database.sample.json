@@ -1,0 +1,12 @@
+{
+	"database": "",
+	"username": "",
+	"password": "",
+	"dialect": "sqlite",
+	"storage": "db.db",
+	"define": {
+		"freezeTableName": "true",
+		"paranoid": "true"
+	},
+	"logging": true
+}
