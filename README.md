@@ -4,6 +4,6 @@ Serwer książki kucharskiej.
 2. Zainstaluj zależności:
    > npm install
 3. Spopuluj bazę danych:
-   > npm migrate
+   > npm run migrate
 4. Uruchom serwer:
    > npm start
