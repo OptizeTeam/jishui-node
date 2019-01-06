@@ -60,7 +60,7 @@ paths:
       tags:
         - Przepisy
       parameters:
-          - $ref: '#/components/parameters/recipeId'
+        - $ref: '#/components/parameters/recipeId'
       responses:
         '204':
           description: Zapytanie przetworzone prawidłowo
@@ -86,7 +86,7 @@ paths:
       tags:
         - Przepisy
       parameters:
-          - $ref: '#/components/parameters/recipeId'
+        - $ref: '#/components/parameters/recipeId'
       responses:
         '200':
           description: Zapytanie przetworzone prawidłowo

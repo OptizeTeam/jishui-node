@@ -52,7 +52,7 @@ class Recipe {
 					return reject({
 						status: status.NOT_FOUND,
 						errors: [{
-							message:'Przepis o podanym identyfikatorze nie istnieje.'
+							message: 'Przepis o podanym identyfikatorze nie istnieje.'
 						}]
 					});
 
