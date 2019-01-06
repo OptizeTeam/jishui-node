@@ -52,4 +52,21 @@ router.get('/:id', (req, res, next) => {
 	});
 });
 
+router.put('/:id', (req, res, next) => {
+	new RecipeValidator(req, [
+		'id',
+		'name'
+	]).validate().then(() => {
+		return new Recipe({
+			id: req.params.id,
+			name: req.body.name,
+			description: req.body.description,
+		}).update();
+	}).then(() => {
+		res.status(204).end();
+	}).catch(err => {
+		next(err);
+	});
+});
+
 module.exports = router;

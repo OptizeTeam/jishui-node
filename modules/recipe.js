@@ -71,6 +71,15 @@ class Recipe {
 		});
 	}
 
+	update() {
+		return new Promise((resolve, reject) => {
+			this.findByPk().then(recipe => recipe.update({
+				name: this.getName,
+				description: this.getDescription
+			})).then(() => resolve()).catch(reject);
+		});
+	};
+
 	delete() {
 		return new Promise((resolve, reject) => {
 			this.findByPk().then(recipe => {
