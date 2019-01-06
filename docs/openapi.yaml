@@ -112,6 +112,38 @@ paths:
                 $ref: '#/components/schemas/errorSimple'
               example:
                 $ref: '#/components/examples/errorSimple'
+    put:
+      summary: Edycja przepisu
+      description: Edycja wybranego przepisu
+      tags:
+        - Przepisy
+      parameters:
+        - $ref: '#/components/parameters/recipeId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/recipeRequest'
+      responses:
+        '204':
+          description: Zapytanie przetworzone prawidłowo
+        '400':
+          description: Przesłano nieprawidłowe dane
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/errorFields'
+              example:
+                $ref: '#/components/examples/errorFields'
+        '404':
+          description: Element nie został znaleziony
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/errorSimple'
+              example:
+                $ref: '#/components/examples/errorSimple'
 components:
   examples:
     errorFields:
