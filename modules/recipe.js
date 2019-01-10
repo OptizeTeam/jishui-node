@@ -9,12 +9,14 @@ class Recipe {
 	constructor(recipe) {
 		this.id = recipe.id;
 		this.name = recipe.name;
+		this.ingredients = recipe.ingredients;
 		this.description = recipe.description;
 	}
 
 	construct(recipe) {
 		this.id = recipe.id;
 		this.name = recipe.name;
+		this.ingredients = recipe.ingredients;
 		this.description = recipe.description;
 	}
 
@@ -26,6 +28,10 @@ class Recipe {
 		return this.name;
 	}
 
+	get getIngredients() {
+		return this.ingredients;
+	}
+
 	get getDescription() {
 		return this.description;
 	}
@@ -34,6 +40,7 @@ class Recipe {
 		return new Promise((resolve, reject) => {
 			models.recipe.create({
 				name: this.getName,
+				ingredients: this.getIngredients,
 				description: this.getDescription
 			}).then((recipe) => {
 				this.construct(recipe);
@@ -75,6 +82,7 @@ class Recipe {
 		return new Promise((resolve, reject) => {
 			this.findByPk().then(recipe => recipe.update({
 				name: this.getName,
+				ingredients: this.getIngredients,
 				description: this.getDescription
 			})).then(() => resolve()).catch(reject);
 		});

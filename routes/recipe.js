@@ -10,7 +10,8 @@ const express = require('express'),
 
 router.post('/', (req, res, next) => {
 	new RecipeValidator(req, [
-		'name'
+		'name',
+		'ingredients'
 	]).validate().then(() => {
 		return new Recipe(req.body).create();
 	}).then(recipe => {
@@ -55,12 +56,14 @@ router.get('/:id', (req, res, next) => {
 router.put('/:id', (req, res, next) => {
 	new RecipeValidator(req, [
 		'id',
-		'name'
+		'name',
+		'ingredients'
 	]).validate().then(() => {
 		return new Recipe({
 			id: req.params.id,
 			name: req.body.name,
-			description: req.body.description,
+			ingredients: req.body.ingredients,
+			description: req.body.description
 		}).update();
 	}).then(() => {
 		res.status(204).end();

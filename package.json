@@ -18,6 +18,7 @@
     "start": "node app"
   },
   "dependencies": {
+    "ajv": "^6.6.2",
     "body-parser": "^1.18.3",
     "compression": "^1.7.3",
     "cors": "^2.8.5",
