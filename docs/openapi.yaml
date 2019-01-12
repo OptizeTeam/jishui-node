@@ -277,6 +277,22 @@ components:
         name:
           description: Nazwa przepisu
           type: string
+        ingredients:
+          description: Składniki przepisu
+          type: array
+          items:
+            description: Składnik przepisu
+            type: object
+            properties:
+              quantity:
+                description: Ilość składnika przepisu
+                type: number
+              unit:
+                description: Jednostka składnika przepisu
+                type: string
+              name:
+                description: Nazwa składnika przepisu
+                type: string
         description:
           description: Opis przepisu
           type: string
