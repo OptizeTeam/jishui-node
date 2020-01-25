@@ -18,16 +18,16 @@
     "start": "node app"
   },
   "dependencies": {
-    "ajv": "^6.6.2",
-    "body-parser": "^1.18.3",
-    "compression": "^1.7.3",
+    "ajv": "^6.11.0",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
     "cors": "^2.8.5",
-    "express": "^4.16.4",
+    "express": "^4.17.1",
     "express-validator": "^5.3.1",
-    "helmet": "^3.15.0",
-    "http-status-codes": "^1.3.0",
+    "helmet": "^3.21.2",
+    "http-status-codes": "^1.4.0",
     "path": "^0.12.7",
-    "sequelize": "^4.42.0",
+    "sequelize": "^4.44.3",
     "sqlite": "^3.0.0"
   },
   "devDependencies": {}
