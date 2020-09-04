@@ -27,7 +27,7 @@
     "helmet": "^3.21.2",
     "http-status-codes": "^1.4.0",
     "path": "^0.12.7",
-    "sequelize": "^4.44.3",
+    "sequelize": "^5.15.1",
     "sqlite": "^3.0.0"
   },
   "devDependencies": {}
