@@ -1,9 +1,8 @@
 {
-	"database": "",
-	"username": "",
-	"password": "",
-	"dialect": "sqlite",
-	"storage": "db.db",
+	"database": "jishui",
+	"username": "root",
+	"password": "qwerty123",
+	"dialect": "mysql",
 	"define": {
 		"freezeTableName": "true",
 		"paranoid": "true"
