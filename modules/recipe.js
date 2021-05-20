@@ -114,6 +114,30 @@ class Recipe {
 			}).catch(reject);
 		});
 	}
+
+	static search(query) {
+		return new Promise((resolve, reject) => {
+			models.recipe.findAll({
+				where: {
+					name: {
+						$like: '%' + query + '%'
+					}
+				},
+				order: [['name', 'asc']]
+			}).then(recipes => {
+				const recipesResponse = [];
+
+				recipes.forEach(recipe => {
+					recipesResponse.push({
+						id: recipe.id,
+						name: recipe.name
+					});
+				});
+
+				return resolve(recipesResponse);
+			}).catch(reject);
+		});
+	}
 }
 
 module.exports = Recipe;

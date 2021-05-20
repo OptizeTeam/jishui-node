@@ -29,6 +29,14 @@ router.get('/list', (req, res, next) => {
 	});
 });
 
+router.get('/search', (req, res, next) => {
+	Recipe.search(req.query.q).then(recipes => {
+		res.json(recipes);
+	}).catch(err => {
+		next(err);
+	});
+});
+
 router.delete('/:id', (req, res, next) => {
 	new RecipeValidator(req, [
 		'id'
